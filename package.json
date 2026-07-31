@@ -1,0 +1,23 @@
+{
+  "name": "freebot",
+  "version": "1.0.0",
+  "description": "Discord 복구봇 - 인증한 유저를 저장하고 서버 복구를 지원합니다",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "deploy-commands": "node src/bot/deploy-commands.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.3",
+    "express": "^4.19.2",
+    "pg": "^8.12.0",
+    "node-cron": "^3.0.3",
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "express-session": "^1.18.0",
+    "uuid": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
