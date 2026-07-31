@@ -62,22 +62,14 @@ module.exports = {
 
     // 유저들에게 보이는 인증 패널 임베드
     const embed = new EmbedBuilder()
-      .setColor(0x5865F2)
-      .setTitle('🔐 서버 인증')
+      .setColor(0x23272A)
       .setDescription(
-        '이 서버에 입장하려면 아래 버튼을 눌러 인증을 완료해주세요.\n\n' +
-        '인증하면 **서버 멤버** 역할이 자동으로 지급됩니다.'
-      )
-      .addFields(
-        { name: '✅ 인증 역할', value: `${role}`, inline: true },
-        { name: '⏱️ 소요 시간', value: '약 10초', inline: true }
-      )
-      .setFooter({ text: '버튼을 눌러 Discord 계정으로 안전하게 인증하세요.' })
-      .setTimestamp();
+        '이 서버에 입장하려면 아래 버튼을 눌러\n인증을 완료해주세요.'
+      );
 
     const row = new ActionRowBuilder().addComponents(
       new ButtonBuilder()
-        .setLabel('🔐 인증하기')
+        .setLabel('인증')
         .setStyle(ButtonStyle.Link)
         .setURL(authUrl)
     );
