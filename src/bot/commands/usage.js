@@ -104,27 +104,8 @@ module.exports = {
 
     const embed3 = new EmbedBuilder()
       .setColor(0xFF9900)
-      .setTitle('📖 복구봇 사용법 - UptimeRobot 설정')
-      .setDescription('봇이 영원히 꺼지지 않도록 UptimeRobot으로 헬스체크를 설정하세요.')
+      .setTitle('📖 복구봇 사용법 - 전체 명령어')
       .addFields(
-        {
-          name: '🤖 UptimeRobot 설정 방법',
-          value: [
-            '1. [uptimerobot.com](https://uptimerobot.com) 가입',
-            '2. **Add New Monitor** 클릭',
-            '3. Monitor Type: **HTTP(s)** 선택',
-            '4. Friendly Name: `복구봇` 입력',
-            '5. URL 입력:',
-            `\`\`\``,
-            `${process.env.AUTH_SITE_URL || 'https://your-app.onrender.com'}/health`,
-            `\`\`\``,
-            '6. Monitoring Interval: **5분** 설정',
-            '7. **Create Monitor** 클릭',
-            '',
-            '✅ 이제 봇이 꺼지면 자동으로 재시작됩니다!'
-          ].join('\n'),
-          inline: false
-        },
         {
           name: '📌 전체 명령어 목록',
           value: [
