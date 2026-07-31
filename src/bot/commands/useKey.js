@@ -118,9 +118,8 @@ module.exports = {
           { name: '❌ 실패', value: `${failed}명`, inline: true },
           {
             name: '💡 실패 원인',
-            failed > 0
-              ? { value: '토큰 만료, 서버 차단, 또는 이미 서버 내 존재', inline: false }
-              : { value: '없음', inline: false }
+            value: failed > 0 ? '토큰 만료, 서버 차단, 또는 이미 서버 내 존재' : '없음',
+            inline: false
           }
         )
         .setTimestamp();
