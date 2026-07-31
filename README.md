@@ -2,6 +2,9 @@
 
 Discord 서버 복구봇입니다. 인증한 유저들을 DB에 저장하고 서버가 날아가도 복구 키로 전원 재초대할 수 있습니다.
 
+## 인증 사이트 URL
+**https://freebot-9jo0.onrender.com**
+
 ## 기능
 
 - 🔐 Discord OAuth2 인증 시스템
@@ -22,30 +25,27 @@ Discord 서버 복구봇입니다. 인증한 유저들을 DB에 저장하고 서
 | `/인증수` | 인증 현황 확인 |
 | `/사용법` | 전체 가이드 |
 
-## 환경변수 설정 (Render)
+## Discord 개발자 포털 필수 설정
+
+1. https://discord.com/developers/applications 접속
+2. 앱 선택 → **OAuth2** → **Redirects** 에 추가:
+   ```
+   https://freebot-9jo0.onrender.com/callback
+   ```
+3. **Bot** → **Privileged Gateway Intents**:
+   - ✅ **Server Members Intent** 활성화
+
+## 봇 초대 링크
 
 ```
-DISCORD_BOT_TOKEN=봇 토큰
-DISCORD_CLIENT_ID=클라이언트 ID
-DISCORD_CLIENT_SECRET=클라이언트 시크릿
-AUTH_SITE_URL=https://your-app.onrender.com
-SESSION_SECRET=랜덤 문자열
+https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=268436480&scope=bot%20applications.commands
 ```
-
-## Discord 개발자 포털 설정
-
-1. [Discord Developer Portal](https://discord.com/developers/applications) 접속
-2. 앱 선택 → OAuth2 → Redirects에 추가:
-   ```
-   https://your-app.onrender.com/callback
-   ```
-3. Bot → Privileged Gateway Intents:
-   - ✅ Server Members Intent 활성화
+`YOUR_CLIENT_ID` 자리에 실제 Client ID 입력
 
 ## UptimeRobot 설정
 
-URL: `https://your-app.onrender.com/health`  
-간격: 5분
+URL: `https://freebot-9jo0.onrender.com/health`  
+간격: **5분**
 
 ## 라이선스
 
